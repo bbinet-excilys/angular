@@ -1,5 +1,3 @@
-<mat-grid-list cols="3" rowHeight="1:1">
-  <mat-grid-tile *ngFor="let recipe of recipes">
-    <app-recipe [recipe]="recipe"></app-recipe>
-  </mat-grid-tile>
-</mat-grid-list>
+<div *ngFor="let recipe of recipes">
+  <app-recipe [recipe]="recipe"></app-recipe>
+</div>

@@ -11,15 +11,15 @@
        <div *ngIf="instructionDisplay">
          <h4>Ingredients</h4>
          <ul>
-           <li *ngFor="let ingredient of recipe.ingredients">{{ingredient.name}}
+           <li *ngFor="let ingredient of recipe.ingredients">{{ingredient.ingredient.name}}
            </li>
          </ul>
        </div>
      </mat-card-content>
-     <mat-card-footer>
-
-     </mat-card-footer>
      <mat-card-actions>
-       <button mat-flat-button color="primary" (click)="toggleInstructions()">Details</button>
+       <button mat-flat-button color="primary" (click)="toggleInstructions()">Show More ...</button>
+       <button mat-flat-button color="warn" (click)="deleteRecipe()">Delete</button>
+       <a [routerLink]="['/recipes/1']" mat-raised-button>Details</a>
+
      </mat-card-actions>
    </mat-card>

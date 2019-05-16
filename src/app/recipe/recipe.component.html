@@ -1,0 +1,25 @@
+   <mat-card class="my-card">
+     <mat-card-header>
+       <mat-card-title>{{recipe.name}}</mat-card-title>
+     </mat-card-header>
+     <img mat-card-lg-image src="{{recipe.picture}}" alt="Photo of {{recipe.name}}">
+     <mat-card-content>
+       <h4>Description</h4>
+       <p>
+         {{recipe.description}}
+       </p>
+       <div *ngIf="instructionDisplay">
+         <h4>Ingredients</h4>
+         <ul>
+           <li *ngFor="let ingredient of recipe.ingredients">{{ingredient.name}}
+           </li>
+         </ul>
+       </div>
+     </mat-card-content>
+     <mat-card-footer>
+
+     </mat-card-footer>
+     <mat-card-actions>
+       <button mat-flat-button color="primary" (click)="toggleInstructions()">Details</button>
+     </mat-card-actions>
+   </mat-card>

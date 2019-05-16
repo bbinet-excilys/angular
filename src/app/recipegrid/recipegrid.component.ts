@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Recipe } from '../model/recipe.model';
-import { MOCK_RECIPES } from '../../assets/recipes.mock'
+import { RecipeService } from '../recipe.service';
 
 @Component({
   selector: 'app-recipegrid',
@@ -8,11 +8,18 @@ import { MOCK_RECIPES } from '../../assets/recipes.mock'
   styleUrls: ['./recipegrid.component.scss']
 })
 export class RecipegridComponent implements OnInit {
-  recipes: Recipe[] = MOCK_RECIPES
+  recipes: Recipe[];
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(recipeService: RecipeService) {
+    recipeService.getRecipes().subscribe(
+      (result: Recipe[]) => {
+        this.recipes = result;
+      },
+      error => {
+        console.log(error);
+      }
+    );
   }
 
+  ngOnInit() {}
 }

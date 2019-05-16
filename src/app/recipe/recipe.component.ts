@@ -11,8 +11,6 @@ export class RecipeComponent implements OnInit {
   @Input()
   recipe: Recipe;
 
-  recipeService: RecipeService;
-
   instructionDisplay: boolean = false;
 
   toggleInstructions(): void {

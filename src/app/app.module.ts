@@ -6,6 +6,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { RecipeComponent } from './recipe/recipe.component';
 import { CustomMaterialModule } from './custom-material/custom-material.module';
 import { RecipegridComponent } from './recipegrid/recipegrid.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,11 +15,8 @@ import { RecipegridComponent } from './recipegrid/recipegrid.component';
     RecipeComponent,
     RecipegridComponent
   ],
-  imports: [
-    BrowserModule,
-    CustomMaterialModule
-  ],
+  imports: [BrowserModule, CustomMaterialModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

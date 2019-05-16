@@ -10,9 +10,12 @@ import { RecipeService } from '../recipe.service';
 export class RecipegridComponent implements OnInit {
   recipes: Recipe[];
 
-  constructor(recipeService: RecipeService) {
-    recipeService.getRecipes().subscribe(
+  constructor(private recipeService: RecipeService) {}
+
+  ngOnInit() {
+    this.recipeService.getRecipes().subscribe(
       (result: Recipe[]) => {
+        console.log(result);
         this.recipes = result;
       },
       error => {
@@ -20,6 +23,4 @@ export class RecipegridComponent implements OnInit {
       }
     );
   }
-
-  ngOnInit() {}
 }

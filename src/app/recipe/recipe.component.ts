@@ -8,16 +8,19 @@ import { RecipeService } from '../recipe.service';
   styleUrls: ['./recipe.component.scss']
 })
 export class RecipeComponent implements OnInit {
+
+  instructionDisplay = false;
+
+  constructor() { }
+
   @Input()
   recipe: Recipe;
 
-  instructionDisplay = false;
 
   toggleInstructions(): void {
     this.instructionDisplay = !this.instructionDisplay;
   }
 
-  constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() { }
 }

@@ -9,6 +9,7 @@ import { RecipegridComponent } from './recipegrid/recipegrid.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CreateRecipeComponent } from './create-recipe/create-recipe.component';
 import { AppRoutingModule } from './app-routing.module';
+import { RecipeDetailsComponent } from './recipe-details/recipe-details.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AppRoutingModule } from './app-routing.module';
     NavbarComponent,
     RecipeComponent,
     RecipegridComponent,
-    CreateRecipeComponent
+    CreateRecipeComponent,
+    RecipeDetailsComponent
   ],
   imports: [BrowserModule, CustomMaterialModule, HttpClientModule, AppRoutingModule],
   providers: [],

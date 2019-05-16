@@ -19,7 +19,7 @@
      <mat-card-actions>
        <button mat-flat-button color="primary" (click)="toggleInstructions()">Show More ...</button>
        <button mat-flat-button color="warn" (click)="deleteRecipe()">Delete</button>
-       <a [routerLink]="['/recipes/1']" mat-raised-button>Details</a>
+       <a [routerLink]="['/recipes', recipe.id]" mat-raised-button>Details</a>
 
      </mat-card-actions>
    </mat-card>
